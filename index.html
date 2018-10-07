@@ -1,13 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+
+
+
     <title>Platforma archeologiczna</title>
 </head>
+
 <body>
-    <h1>Hello</h1>
+    <div class="flexbox-container">
+
+        <div class="left-container">
+            <div class="userpanel">
+                <div class="userpanel-content">
+                    <div class="logocontainer">
+                        <span class="logo">
+                            <a href=#></a>
+                        </span>
+                        <span class="logotext-container">
+                            <p class="logotitle">eplatforma</p>
+                            <p class="logotitle2">archeologiczna</p>
+                        </span>
+
+                    </div>
+                    <h1 class="username">Hello, user</h1>
+                    <div class="hl"></div>
+                    <img src="gfx/logout.svg" id="logout" alt="logout">
+                    <h4>logout</h4>;
+
+
+                </div>
+            </div>
+
+
+            <div class="adminpanel">
+                <div class="adminpanel-content">
+                    <img src="gfx/icoadmin.svg" id="icoadmin" alt="adminicon">
+                    <h2 class="adminname">Administrator</h2>
+                    <div class="hlb"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="right-container">
+
+            <div class="table-editing">
+                <div class="treeview">
+                    <img src="gfx/icoadmin.svg" id="icoadmin" alt="adminicon">
+                    Widok listy
+                </div>
+                <span class="mapview">
+                    <img src="gfx/icoadmin.svg" id="icoadmin" alt="adminicon">
+                    Widok mapy</span>
+                <span class="editcol">
+                    <img src="gfx/icoadmin.svg" id="icoadmin" alt="adminicon">
+
+                    Edytuj kolumny</span>
+            </div>
+
+
+
+            <table id="tableid">
+                <thead>
+                    <tr>
+                        <th class="headtable">Id</th>
+                        <th class="headtable">Lastname </th>
+                        <th class="headtable">Savings </th>
+                        <th class="headtable">soethinh </th>
+                        <th class="headtable">sdfgsdfg </th>
+                        <th class="headtable">sdfgsdfg </th>
+                        <th class="headtable"></th>
+                        <th class="headtable"></th>
+                    </tr>
+                </thead>
+
+
+                <tbody>
+                    <div class="tbodydiv">
+                        <tr>
+                            <td>Adam</td>
+                            <td>Kowalski</td>
+                            <td>asdasd</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                    <a href="#">
+                                        <img src="gfx/logout.svg" id="logout" alt="logout">
+                                        Zobacz</a>
+                                </td>
+                                <td>
+                                        <a href="#">
+                                            <img src="gfx/logout.svg" id="logout" alt="logout">
+                                            Zobacz na mapie</a>
+                                    </td>
+                        </tr>
+                        <tr>
+                            <td>Peter</td>
+                            <td>Adams</td>
+                            <td>100</td>
+                            <td>321</td>
+                            <td>fsdfs</td>
+                            <td>$100</td>
+                            <td>
+                                    <a href="#">
+                                        <img src="gfx/logout.svg" id="logout" alt="logout">
+                                        Zobacz</a>
+                                </td>
+                                <td>
+                                        <a href="#">
+                                            <img src="gfx/logout.svg" id="logout" alt="logout">
+                                            Zobacz na mapie</a>
+                                    </td>
+                        </tr>
+                        <tr>
+                            <td>Eva</td>
+                            <td>adadasd</td>
+                            <td>150</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <a href="#">
+                                    <img src="gfx/logout.svg" id="logout" alt="logout">
+                                    Zobacz</a>
+                            </td>
+                            <td>
+                                    <a href="#">
+                                        <img src="gfx/logout.svg" id="logout" alt="logout">
+                                        Zobacz na mapie</a>
+                                </td>
+
+
+                        </tr>
+                        <tr>
+                            <td>Joe</td>
+                            <td>sdfsdfsdf</td>
+                            <td>300</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                    <a href="#">
+                                        <img src="gfx/logout.svg" id="logout" alt="logout">
+                                        Zobacz</a>
+                                </td>
+                                <td>
+                                        <a href="#">
+                                            <img src="gfx/logout.svg" id="logout" alt="logout">
+                                            Zobacz na mapie</a>
+                                    </td>
+                        </tr>
+                        <tr>
+                            <td>sdfsfsdf</td>
+                            <td>Brown</td>
+                            <td>250</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                    <a href="#">
+                                        <img src="gfx/logout.svg" id="logout" alt="logout">
+                                        Zobacz</a>
+                                </td>
+                                <td>
+                                        <a href="#">
+                                            <img src="gfx/logout.svg" id="logout" alt="logout">
+                                            Zobacz na mapie</a>
+                                    </td>
+                        </tr>
+                    </div>
+
+                </tbody>
+            </table>
+
+
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+
 </body>
+
 </html>
