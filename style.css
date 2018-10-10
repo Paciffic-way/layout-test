@@ -21,7 +21,6 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -73,15 +72,20 @@ a:hover{
     color: black;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 700;
-	font-size: 23px;
+	font-size: 20px;
 	margin: 30px 0 15px 5px ;
 	display:inline-block;
 
 }
 
 .left-container {
-	z-index: 2;
+	z-index: 4;
 width: 10vw;
+
+
+left: 0;
+
+position: sticky;
 min-width:370px;
 height: 100vh;
 box-shadow: 0px 0px 10px #bebebe;
@@ -89,13 +93,14 @@ box-shadow: 0px 0px 10px #bebebe;
 -moz-box-shadow: 0px 0px 10px #bebebe;
 }
 .right-container {
-	width: 100%;
-	
 	background-color: #f5f5f5;
-	padding:0px 0px 0px 0px;
+	padding:0px 10px 0px 10px;
+	width:100%;
+	min-width: 1400px;
 
 }
 .userpanel  {
+
 	display:block;
 	width: 100%;
 	height: 50vh;
@@ -145,12 +150,22 @@ box-shadow: 0px 0px 10px #bebebe;
 .hl {
     border-top: 4px solid white;
 	width: 100%;
+	transform: scaleX(0);
+	transform-origin: left;
+	animation: grow cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+	animation-delay: 0.4s;
 }
 
 
 .hlb {
     border-top: 4px solid black;
 	width: 100%;
+	transform: scaleX(0);
+	transform-origin: left;
+	animation: grow cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+	
+
+	animation-delay: 0.4s;
 }
 .adminpanel {
 		width: 100%;
@@ -167,29 +182,139 @@ box-shadow: 0px 0px 10px #bebebe;
 }
 
 
-#logout {
-	margin: 20px 0 0 0 ;
+#logout,  #mapview, #login, #add, #edit, #dictionary{
+	margin: 20px 8px 0 0 ;
 	bottom:15px;
 	width:20px;
+	height:20px;
 	cursor:pointer;  
-
+	vertical-align: -4px;
 
 }
+#arrow, #mapico2 {
+	margin: 0px 8px 0 0 ;
+	bottom:15px;
+	width:20px;
+	height:20px;
+	cursor:pointer;  
+	vertical-align: -4px;
+}
+
+#arrow1 {
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	margin: 0px 5px 0 0 ;
+	bottom:15px;
+	width:15px;
+	height:20px;
+	cursor:pointer;  
+	vertical-align: -4px;
+}
+
+#arrow2 {
+
+	margin: 0px 0px 0 5px ;
+	bottom:15px;
+	width:15px;
+	height:20px;
+	cursor:pointer;  
+	vertical-align: -4px;
+}
+
+
 
 h4{
 	display:inline-block;
 	color: white;
+	cursor:pointer;  
 
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 15px;
 	vertical-align: top;
-	padding: 21px 0 0 5px ;
+	padding: 21px 0 0 0px ;
 
 	
 }
 
 .flexbox-container {
 	display:flex;
+	width:100%;
+}
+.username {
+	-webkit-animation: slideIn 1s ease-in-out;
+
+}
+
+
+
+@-webkit-keyframes slideIn {
+	0% {
+	  transform: translateX(-20px);
+	  opacity: 0;
+
+	}
+	100% {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
+
+  
+@-webkit-keyframes slideDown {
+	0% {
+	  transform: translateY(-20px);
+	  opacity: 0;
+
+	}
+	100% {
+	  transform: translateY(0);
+	  opacity: 1;
+	}
+  }
+
+  @-webkit-keyframes opaCity {
+	0% {
+	  opacity: 0;
+
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+
+  @-webkit-keyframes grow {
+	from {
+		transform: scaleX(0);
+	  }
+	  to {
+		transform: scaleX(1);
+	  }
+  }
+
+#textbigger, #textsmaller, #contrastoff, #contraston, #pl, #en, #de {
+	cursor: pointer;
+	transition: ease-in-out 100ms;
+
+	opacity: 0.5
+}
+#textbigger:hover, #textsmaller:hover, #contrastoff:hover, #contraston:hover, #pl:hover, #en:hover, #de:hover{
+	transition: ease-in-out 100ms;
+	cursor: pointer;
+	opacity: 1;
+}
+
+
+img:hover {
+	transition: transform 200ms;
+
+	background-color: transparent;
+	/*box-shadow: 0px 0px 10px #49ce54;
+	-webkit-box-shadow: 0px 0px 10px #49ce54;
+	-moz-box-shadow: 0px 0px 10px ##49ce54; */
+	transform: translateY(-2px);
+
+	
+
 }
 
 .table-editing {
@@ -199,23 +324,68 @@ h4{
 -ms-user-select: none;    
 -o-user-select: none;
 
-
+display:flex;
+left: 370px;
 user-select: none;  
 	height: 160px;
 	background-color: white;
 }
 
-.treeview, .mapview, .editcol {
-	display: inline-block;
-	margin:0 0 0 10px;	
-	height: 70px;
-	cursor:pointer;  
+.language-icons{
+	-webkit-animation: slideDown 1s 0.5s both;
 
-	width: 160px;
+	position: absolute;
+	right: 40px;
+	top:30px;
+	cursor: pointer;
+}
+
+.accessibility-icons{
+	-webkit-animation: slideDown 1s 0.5s both;
+
+	position: absolute;
+	right: 140px;
+	top:25px;
+}
+
+.adminbutton {
+	height: 70px;
+	cursor:pointer;
+	margin: 10px 10px 0 0 ;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+	padding: 0 10px 0 0 ;
+
+}
+
+.loginala{
+	display:block;
+	position: absolute;
+	height: 70px;
+	cursor:pointer;
+	margin: 10px 10px 0 0 ;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+	padding: 30px 30px 30px 30px ;
+	bottom: 40px;
+}
+
+.treeview, .mapview, .editcol {
+	-webkit-animation: slideDown 1s 0.5s both;
+	
+	
+	
+	display: inline-block;
+	height: 70px;
+	cursor:pointer;
+	width: 170px;
 	background-color: white;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 15px;
-	padding: 25px 10px 20px 20px;
+	padding: 5px 5px 20px 20px;
+	margin: 0 5px 0 0;
+
+
 	}
 
 	.treeview:hover, .mapview:hover, .editcol:hover {
@@ -229,35 +399,46 @@ user-select: none;
 
 
 table {
+	
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 18px;
-	display:table;
-	width:99%;
 	border-collapse: separate;
 	border-spacing:0 15px;
 	margin: auto;	
 	z-index: 2;
 	position: relative;
-	top: -100px;
+	top: -80px;
+	-webkit-animation: opaCity 0.7s 0.5s both;
+
+	width: 100%;
+
 
 
 }
 
-td {
-	padding: 15px;
-	height:70px;
- 
 
+
+.idcol {
+	width: 40px;
+	min-width: 20px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+td {
+	padding: 12px;
+	height:80px;
 	text-align: left;
-	min-width: 150px;
+	min-width: 120px;
 	border: none;
-	vertical-align: middle;
 	background-color:white;
 }
 
 th {
 	height:50px;
 	padding: 15px;
+	min-width: 120px;
 
 
     text-align: left;
@@ -292,13 +473,13 @@ tbody{
 	font-size: 18px;
 	background-color: white;
 	height:80px;
+	min-width: 150px;
 	
 }
 
 
 table tbody tr:hover {
 	transition: box-shadow 200ms;
-
 	box-shadow: 0px 0px 10px #bebebe;
 	-webkit-box-shadow: 0px 0px 10px #bebebe;
 	-moz-box-shadow: 0px 0px 10px #bebebe;
@@ -318,18 +499,204 @@ table tbody tr:hover {
 .tbodydiv {
 	margin: 0 0 0 30px;
 }
-/*
-tr:before  {
-   	line-height:1em;
-    content:".";
+
+
+.inputcontainer {
+	position: absolute;
+	right: 30px;
+	bottom: 40px;
+	display: block;
+}
+
+
+input[type=number] { 
+
+	background-color: transparent;
+	border: 1px solid rgb(138, 138, 138);
+
+	width: 30px;
+	height:40px;
+	text-align: center;
+	color: gray;
+	font-family: 'Source Sans Pro', sans-serif;
+		font-size: 14px;
+
+	-moz-appearance: textfield;
+	appearance: textfield;
+	margin: 0; 
+  }
+
+  input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1720px) {
+
+
+	.adminbutton {
+		display:block;
+	}
+    .right-container {
+		background-color: #f5f5f5;
+		padding:0px 10px 0px 10px;
+		width:auto;	
+		min-width: 0;
+		display:block;				
+	}
+
+	.left-container {
+		width: 100%;
+		height:300px;
+		position:relative;
+		}
+
+	.userpanel{
+		display: inline-block;
+		float:left;
+		height: 100px;
+		width:50%;
+
+	}
+
+	.adminpanel {
+		display: inline-block;
+		float:left;
+		height: 100px;
+		width:50%;
+
+	}
+
+.logocontainer{
+	width:200px;
+}
+	.accessibility-icons, .language-icons {
+		display:flex;
+		position: relative;
+
+	}
+.flexbox-container {
 	display:block;
-	opacity: 0;
+}
+.username{
+	display: inline-block;
+	margin:20px 0 10px 0 ;
+	color: black;
+
 }
 
+.adminbutton{
+	display: inline-block;
+}
 
-
-.tablecontainer {
+.loginala {
+	display:block;
+	position:relative;
+}
+table {
+	
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	display:block;
+	border-collapse: separate;
+	border-spacing:0 15px;
+	margin: auto;	
 	z-index: 2;
+	position: relative;
+	top: -80px;
+	overflow: auto;
+	width:100%;
+
+}
+h4{
+	color:black;
+}
+.hl, .hlb{
+	border-top: 4px solid black;
+	width: 300px;
+
+
+}
+}
+/*
+@media screen and (max-width: 500px) {
+
+
+	.right-container {
+		background-color: #f5f5f5;
+		padding:0px 10px 0px 10px;
+		width:auto;					
+	}
+
+.adminpanel-content{
+	width:200px;
+	display:inline-block;
+
+}
+table {
+	
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	display:table;
+	border-collapse: separate;
+	border-spacing:0 15px;
+	margin: auto;	
+	z-index: 2;
+	position: relative;
+	top: -80px;
+	overflow: auto;
+	width:100%;
+
 }
 
+	
+	.flexbox-container {
+		display:flex; 
+		flex-direction: column;
+		width:100%;
+	}
 
+	.left-container {
+		z-index: 4;
+		height: 50px;
+	box-shadow: 0px 0px 10px #bebebe;
+	-webkit-box-shadow: 0px 0px 10px #bebebe;
+	-moz-box-shadow: 0px 0px 10px #bebebe;
+	}
+
+	.userpanel  {
+		display:inline-block;
+		width: 50%;
+		height: 50px;
+		background-image: url("gfx/bg.jpg");
+	}
+
+	.adminpanel {
+		display:inline-block;
+
+		width: 50%;
+		height: 50px;
+		background-image: url("gfx/admin-bg.jpg");
+	}
+
+
+	.adminpanel {
+		width: 500%;
+	height: 50px;
+	background-image: url("gfx/admin-bg.jpg");
+	}
+
+	
+}
+
+*/

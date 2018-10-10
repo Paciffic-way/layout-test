@@ -21,6 +21,8 @@ function changeTree() {
     if (checker == false) {
       checker = true;
       document.querySelector("table#tableid").style.display = "table";
+      document.querySelector("table#tableid").style = '-webkit-animation: opaCity 0.4s both;';
+
     }
   }
   

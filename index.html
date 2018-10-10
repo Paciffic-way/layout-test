@@ -34,7 +34,7 @@
                     <h1 class="username">Hello, user</h1>
                     <div class="hl"></div>
                     <img src="gfx/logout.svg" id="logout" alt="logout">
-                    <h4>logout</h4>;
+                    <h4>logout</h4>
 
 
                 </div>
@@ -42,11 +42,23 @@
 
 
             <div class="adminpanel">
+               
                 <div class="adminpanel-content">
                     <img src="gfx/icoadmin.svg" id="icoadmin" alt="adminicon">
                     <h2 class="adminname">Administrator</h2>
                     <div class="hlb"></div>
+                    <span class="adminbutton">
+                        <img src="gfx/add.svg" id="add" alt="add">
+                        Dodaj stanowisko</span>
+                    <span class="adminbutton">
+                        <img src="gfx/dictionary.svg" id="dictionary" alt="dictionary">
+                        Słowniki</span>
+
                 </div>
+
+                <span class="loginala">
+                    <img src="gfx/login.svg" id="login" alt="login">
+                    Zaloguj przez ALA</span>
             </div>
         </div>
 
@@ -54,32 +66,60 @@
         <div class="right-container">
 
             <div class="table-editing">
-                <div class="treeview">
-                    <img src="gfx/icoadmin.svg" id="icoadmin" alt="adminicon">
-                    Widok listy
-                </div>
-                <span class="mapview">
-                    <img src="gfx/icoadmin.svg" id="icoadmin" alt="adminicon">
-                    Widok mapy</span>
-                <span class="editcol">
-                    <img src="gfx/icoadmin.svg" id="icoadmin" alt="adminicon">
+               
+                    <div class="treeview">
+                        <img src="gfx/dictionary.svg" id="dictionary" alt="dictionary">
+                        Widok listy
+                    </div>
+                    <span class="mapview">
+                        <img src="gfx/mapview.svg" id="mapview" alt="mapview">
+                        Widok mapy</span>
+                    <span class="editcol">
+                        <img src="gfx/edit.svg" id="edit" alt="edit">
 
-                    Edytuj kolumny</span>
+                        Edytuj kolumny</span>
+                      
+                        <div class="language-and-accessibility">
+                                <span class="accessibility-icons">
+                                    <img src="gfx/textbigger.jpg" id="textbigger" alt="textbigger">
+                                    <img src="gfx/textsmaller.jpg" id="textsmaller" alt="textsmaller">
+                                    <img src="gfx/contrastoff.jpg" id="contrastoff" alt="contrastoff">
+                                    <img src="gfx/contraston.jpg" id="contraston" alt="contraston">
+                                </span>
+                
+                                <span class="language-icons">
+                                    <img src="gfx/pl.jpg" id="pl" alt="pl">
+                                    <img src="gfx/en.jpg" id="en" alt="en">
+                                    <img src="gfx/de.jpg" id="de" alt="de">
+                                </span>
+                
+                            </div>
             </div>
+
+
+           
+      
+
 
 
 
             <table id="tableid">
                 <thead>
                     <tr>
-                        <th class="headtable">Id</th>
-                        <th class="headtable">Lastname </th>
-                        <th class="headtable">Savings </th>
-                        <th class="headtable">soethinh </th>
-                        <th class="headtable">sdfgsdfg </th>
-                        <th class="headtable">sdfgsdfg </th>
+                        <th class="idcol">Id</th>
+                        <th class="headtable">Nazwa stanowiska</th>
+                        <th class="headtable">Województwo</th>
+                        <th class="headtable">Powiat</th>
+                        <th class="headtable">Gmina</th>
+                        <th class="headtable">Miasto</th>
+                        <th class="headtable">AZP</th>
+                        <th class="headtable">Nr stanowiska <br> w miejscowości</th>
+                        <th class="headtable">Nr stanowiska <br> na obszarze AZP</th>
                         <th class="headtable"></th>
                         <th class="headtable"></th>
+
+
+
                     </tr>
                 </thead>
 
@@ -87,104 +127,128 @@
                 <tbody>
                     <div class="tbodydiv">
                         <tr>
-                            <td>Adam</td>
-                            <td>Kowalski</td>
-                            <td>asdasd</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                    <a href="#">
-                                        <img src="gfx/logout.svg" id="logout" alt="logout">
-                                        Zobacz</a>
-                                </td>
-                                <td>
-                                        <a href="#">
-                                            <img src="gfx/logout.svg" id="logout" alt="logout">
-                                            Zobacz na mapie</a>
-                                    </td>
-                        </tr>
-                        <tr>
-                            <td>Peter</td>
-                            <td>Adams</td>
-                            <td>100</td>
-                            <td>321</td>
-                            <td>fsdfs</td>
-                            <td>$100</td>
-                            <td>
-                                    <a href="#">
-                                        <img src="gfx/logout.svg" id="logout" alt="logout">
-                                        Zobacz</a>
-                                </td>
-                                <td>
-                                        <a href="#">
-                                            <img src="gfx/logout.svg" id="logout" alt="logout">
-                                            Zobacz na mapie</a>
-                                    </td>
-                        </tr>
-                        <tr>
-                            <td>Eva</td>
-                            <td>adadasd</td>
-                            <td>150</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="idcol">1</td>
+                            <td>Asystent</td>
+                            <td>Pomorskie</td>
+                            <td>Bartoszycki</td>
+                            <td>Cisna</td>
+                            <td>Olsztyn</td>
+                            <td>Olsztyn</td>
+                            <td>657765675</td>
+                            <td>0647341</td>
                             <td>
                                 <a href="#">
-                                    <img src="gfx/logout.svg" id="logout" alt="logout">
+                                    <img src="gfx/arrow.svg" id="arrow" alt="arrow">
                                     Zobacz</a>
                             </td>
                             <td>
-                                    <a href="#">
-                                        <img src="gfx/logout.svg" id="logout" alt="logout">
-                                        Zobacz na mapie</a>
-                                </td>
+                                <a href="#">
+                                    <img src="gfx/mapview.svg" id="mapico2" alt="mapview">
+                                    Mapa</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="idcol">2</td>
+                            <td>Asystent</td>
+                            <td>Warmińsko-mazurskie</td>
+                            <td>Bartoszycki</td>
+                            <td>Kamyk</td>
+                            <td>Warszawa</td>
+                            <td>Warszawa</td>
+                            <td>47842324</td>
+                            <td>25647341</td>
+                            <td>
+                                <a href="#">
+                                    <img src="gfx/arrow.svg" id="arrow" alt="arrow">
+                                    Zobacz</a>
+                            </td>
+                            <td>
+                                <a href="#">
+                                    <img src="gfx/mapview.svg" id="mapico2" alt="mapview">
+                                    Mapa</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="idcol">3</td>
+                            <td>Asystent</td>
+                            <td>Podlaskie</td>
+                            <td>Braniewski</td>
+                            <td>Jejkowice</td>
+                            <td>Olsztyn</td>
+                            <td>Olsztyn</td>
+                            <td>575896564</td>
+                            <td>7647341</td>
+                            <td>
+                                <a href="#">
+                                    <img src="gfx/arrow.svg" id="arrow" alt="arrow">
+                                    Zobacz</a>
+                            </td>
+                            <td>
+                                <a href="#">
+                                    <img src="gfx/mapview.svg" id="mapico2" alt="mapview">
+                                    Mapa</a>
+                            </td>
 
 
                         </tr>
                         <tr>
-                            <td>Joe</td>
-                            <td>sdfsdfsdf</td>
-                            <td>300</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="idcol">4</td>
+                            <td>Asystent</td>
+                            <td>Śląskie</td>
+                            <td>Brodnicki</td>
+                            <td>Pisz</td>
+                            <td>Lublin</td>
+                            <td>Lublin</td>
+                            <td>234842324</td>
+                            <td>45622342</td>
                             <td>
-                                    <a href="#">
-                                        <img src="gfx/logout.svg" id="logout" alt="logout">
-                                        Zobacz</a>
-                                </td>
-                                <td>
-                                        <a href="#">
-                                            <img src="gfx/logout.svg" id="logout" alt="logout">
-                                            Zobacz na mapie</a>
-                                    </td>
+                                <a href="#">
+                                    <img src="gfx/arrow.svg" id="arrow" alt="arrow">
+                                    Zobacz</a>
+                            </td>
+                            <td>
+                                <a href="#">
+                                    <img src="gfx/mapview.svg" id="mapico2" alt="mapview">
+                                    Mapa</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>sdfsfsdf</td>
-                            <td>Brown</td>
-                            <td>250</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="idcol">5</td>
+                            <td>Asystent</td>
+                            <td>Mazowieckie</td>
+                            <td>Chełmiński</td>
+                            <td>Stawiszyn</td>
+                            <td>Radom</td>
+                            <td>Radom</td>
+                            <td>6442324</td>
+                            <td>89647341</td>
                             <td>
-                                    <a href="#">
-                                        <img src="gfx/logout.svg" id="logout" alt="logout">
-                                        Zobacz</a>
-                                </td>
-                                <td>
-                                        <a href="#">
-                                            <img src="gfx/logout.svg" id="logout" alt="logout">
-                                            Zobacz na mapie</a>
-                                    </td>
+                                <a href="#">
+                                    <img src="gfx/arrow.svg" id="arrow" alt="arrow">
+                                    Zobacz</a>
+                            </td>
+                            <td>
+                                <a href="#">
+                                    <img src="gfx/mapview.svg" id="mapico2" alt="mapview">
+                                    Mapa</a>
+                            </td>
                         </tr>
                     </div>
 
                 </tbody>
             </table>
+            <div class="inputcontainer">
 
+                <a href="#">
+                    <img src="gfx/greyarrow.svg" id="arrow1" alt="arrow">
+                </a>
 
+                <input type="number">
 
+                <a href="#">
+                    <img src="gfx/greyarrow.svg" id="arrow2" alt="arrow">
+                </a>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
