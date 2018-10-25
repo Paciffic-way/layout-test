@@ -82,7 +82,7 @@ a:hover{
 	z-index: 4;
 width: 10vw;
 
-
+top:0;
 left: 0;
 
 position: sticky;
@@ -96,7 +96,7 @@ box-shadow: 0px 0px 10px #bebebe;
 	background-color: #f5f5f5;
 	padding:0px 10px 0px 10px;
 	width:100%;
-	min-width: 1400px;
+	/*min-width: 1400px;*/
 
 }
 .userpanel  {
@@ -325,27 +325,36 @@ img:hover {
 -o-user-select: none;
 
 display:flex;
+position: fixed;
+width: 100%;
 left: 370px;
 user-select: none;  
-	height: 160px;
+z-index: 4;
+	height: 80px;
 	background-color: white;
 }
 
+.language-and-accessibility{
+	right:10px;
+	top:25px;
+	position:fixed;
+}
 .language-icons{
 	-webkit-animation: slideDown 1s 0.5s both;
 
-	position: absolute;
-	right: 40px;
-	top:30px;
+
+
+	position: relative;
+
 	cursor: pointer;
 }
 
 .accessibility-icons{
 	-webkit-animation: slideDown 1s 0.5s both;
 
-	position: absolute;
-	right: 140px;
-	top:25px;
+	position: relative;
+
+	cursor: pointer;
 }
 
 .adminbutton {
@@ -404,10 +413,12 @@ table {
 	font-size: 18px;
 	border-collapse: separate;
 	border-spacing:0 15px;
-	margin: auto;	
+	
+
+	margin-top: 80px;	
 	z-index: 2;
 	position: relative;
-	top: -80px;
+	
 	-webkit-animation: opaCity 0.7s 0.5s both;
 
 	width: 100%;
