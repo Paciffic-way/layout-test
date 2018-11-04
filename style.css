@@ -554,6 +554,28 @@ input[type=number]::-webkit-outer-spin-button {
 
 @media screen and (max-width: 1720px) {
 
+	.responsiveinfo {
+		display:block;
+		background-color: black;
+		opacity: 0.7;
+		z-index: 999;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+	
+	}
+
+	.infotext{
+		text-align: center;
+		color: white;
+		position: relative;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 700;
+		font-size: 28px;
+		top: 50%;
+		}
 
 	.adminbutton {
 		display:block;
