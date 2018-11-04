@@ -546,7 +546,15 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 
-
+.infotext{
+	text-align: center;
+	color: white;
+	position: fixed;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 700;
+	font-size: 28px;
+	z-index: -99;
+	}
 
 
 
